@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/price_processor
+    username: price_user
+    password: price_pass123
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    locations: classpath:db/migration
+
+app:
+  folders:
+    incoming: ./incoming
+    processed: ./processed
+    archive: ./archive
+    error: ./error
